@@ -58,31 +58,20 @@ open index.html
 
 ---
 
-## 📜 License
-
-This project is open-source and available under the [MIT License](LICENSE).
-
----
-
 ## 🙌 Acknowledgements
 
 Thanks to [@mebjas](https://github.com/mebjas) for the excellent [html5-qrcode](https://github.com/mebjas/html5-qrcode) library.
 
 ---
 
-## 📬 Contact
-
-Got feedback or want to contribute? Feel free to open an issue or PR.
-Email: \[[your-email@example.com](mailto:your-email@example.com)]
-
-```
-
----
-
 Let me know if you want me to:
+
 - Replace placeholders (like your GitHub username or contact email)
 - Add Netlify/Vercel deployment steps
 - Include actual screenshots
 
 Would you like this saved as a downloadable `.md` file too?
+
+```
+
 ```
