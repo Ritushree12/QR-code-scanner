@@ -27,7 +27,26 @@ function startCameraScan() {
               document.getElementById("qr-result-cam").textContent =
                 decodedText;
 
-              stopCameraScan();
+              html5QrCode
+                .stop()
+                .then(() => {
+                  html5QrCode.clear();
+                  document.getElementById("stop-selection").style.display =
+                    "none";
+                  document.getElementById("qr-reader-cam").style.display =
+                    "none";
+                  document.getElementById("error-msg-cam").style.display =
+                    "none";
+
+                  document.getElementById("cam-selection").style.display =
+                    "none";
+                  document.getElementById("upload-selection").style.display =
+                    "none";
+                })
+                .catch((err) => {
+                  document.getElementById("error-msg-cam").textContent =
+                    "Stop failed: " + err;
+                });
             },
             (error) => {
               document.getElementById("error-msg-cam").textContent =
@@ -48,6 +67,7 @@ function startCameraScan() {
         "Error getting cameras: " + err;
     });
 }
+
 function stopCameraScan() {
   if (html5QrCode) {
     html5QrCode
