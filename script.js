@@ -1,4 +1,4 @@
-let html5QrCode = null; // Global variable
+let html5QrCode = null;
 
 function startCameraScan() {
   document.getElementById("cam-selection").style.display = "none";
@@ -27,7 +27,6 @@ function startCameraScan() {
               document.getElementById("qr-result-cam").textContent =
                 decodedText;
 
-              // Auto stop after successful scan
               stopCameraScan();
             },
             (error) => {
@@ -57,10 +56,17 @@ function stopCameraScan() {
       .then(() => {
         html5QrCode.clear();
         document.getElementById("qr-reader-cam").innerHTML = "";
+
         document.getElementById("stop-selection").style.display = "none";
         document.getElementById("cam-selection").style.display = "inline-block";
         document.getElementById("upload-selection").style.display =
           "inline-block";
+        document.getElementById("qr-reader-cam").style.display = "none";
+
+        document.getElementById("scanned-result-cam").style.display = "none";
+        document.getElementById("error-msg-cam").style.display = "none";
+        document.getElementById("error-msg-cam").textContent = "";
+        document.getElementById("qr-result-cam").textContent = "";
       })
       .catch((err) => {
         document.getElementById("error-msg-cam").textContent =
@@ -73,7 +79,7 @@ function triggerImageUpload() {
   document.getElementById("cam-selection").style.display = "none";
   document.getElementById("upload-selection").style.display = "none";
   document.getElementById("qr-reader-upd").style.display = "block";
-  document.getElementById("qr-image-input").click(); // Automatically opens file dialog
+  document.getElementById("qr-image-input").click();
 }
 document.addEventListener("DOMContentLoaded", () => {
   const qrInput = document.getElementById("qr-image-input");
@@ -103,4 +109,8 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   }
+});
+document.getElementById("logo").addEventListener("click", function () {
+  window.location.href = "index.html";
+  // location.reload();
 });
