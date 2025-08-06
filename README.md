@@ -1,71 +1,47 @@
-```markdown
-# 📦 QR Code Scanner Web App
+📦 QR Code Scanner Web App
+A responsive web application to scan QR codes using your device's camera or by uploading an image. Built with html5-qrcode, it provides a fast, clean, and user-friendly experience.
 
-A responsive web application to scan QR codes using either your **device's camera** or by **uploading an image**. Built with [html5-qrcode](https://github.com/mebjas/html5-qrcode), it provides a simple and clean interface for fast QR code scanning directly from the browser.
+🚀 Features
+📷 Scan via Camera – Supports webcam or mobile camera
 
----
+🖼️ Scan via Image Upload – Upload a QR code image to scan
 
-## 🚀 Features
+🎨 Responsive Design – Optimized for all screen sizes
 
-- 📷 **Scan via Camera** – Use webcam or phone camera to scan live
-- 🖼️ **Scan via Image Upload** – Upload an image file containing a QR code
-- 🎨 **Responsive Design** – Optimized for both desktop and mobile
-- 🧩 **Lightweight and Fast** – No installations or backend required
-- 🪄 **Smooth UI** – Animated buttons with clean user feedback
+⚡ No Backend Needed – Fully static; runs in the browser
 
----
+✨ Smooth UI – Animations and clear feedback
 
-## 📂 Project Structure
-```
-
+📂 Project Structure
+bash
+Copy
+Edit
 /project-root
-│
-├── index.html # Main HTML page
-├── style.css # Styling for UI
-├── script.js # QR scanning logic (camera + image)
-└── README.md # You're here!
+├── index.html # Main HTML file
+├── style.css # Stylesheet
+├── script.js # QR scanning logic
+└── README.md # Project description
+💻 Getting Started
 
-````
+1. Clone this repository
+   bash
+   Copy
+   Edit
+   git clone https://github.com/your-username/qr-code-scanner.git
+   cd qr-code-scanner
+2. Open the app
+   Just open index.html in your browser:
 
----
-
-## 📦 Installation
-
-1. **Clone or download this repository**
-
-```bash
-git clone https://github.com/your-username/qr-code-scanner.git
-cd qr-code-scanner
-````
-
-2. **Open in browser**
-
-You can simply open `index.html` in your browser:
-
-```bash
+bash
+Copy
+Edit
 open index.html
-# or just double-click the file
-```
+✅ No server or installation needed — it's all client-side!
 
-> ✅ No server setup or build tools required.
+🛠️ Tech Stack
+html5-qrcode
 
----
+HTML5 + CSS3 + JavaScript
 
-## 🛠️ Built With
-
-- [html5-qrcode](https://github.com/mebjas/html5-qrcode)
-- HTML5, CSS3, JavaScript (Vanilla)
-
----
-
-## 🙌 Acknowledgements
-
-Thanks to [@mebjas](https://github.com/mebjas) for the excellent [html5-qrcode](https://github.com/mebjas/html5-qrcode) library.
-
----
-
-Let me know if you want me to:
-
-- Replace placeholders (like your GitHub username or contact email)
-- Add Netlify/Vercel deployment steps
-- Include actual screenshots
+🙌 Credits
+Thanks to @mebjas for the html5-qrcode library.
