@@ -20,23 +20,42 @@
     </div>
 
     <div class="scanner-select">
+        <!-- Camera Section -->
         <div class="camera-selection">
-            <button onclick="startCameraScan()" class="cam-selection" id="cam-selection">Scan using Camera</button>
+            <div class="camera-buttons">
+                <button onclick="startCameraScan()" class="cam-selection" id="cam-selection">
+                    <img src="assets/play.png" alt="Start" class="icon" /> Start Camera Scan
+                </button>
+                <button onclick="stopCameraScan()" class="stop-selection" id="stop-selection" style="display: none;">
+                    <img src="assets/stop.png" alt="Stop" class="icon" /> Stop Scanning
+                </button>
+            </div>
+    
             <div id="qr-reader-cam" style="width: 300px; height: 300px; display: none;"></div>
+    
             <p id="error-msg-cam" class="error-msg" style="display: none;"></p>
-            <p id="scanned-result-cam" style="display: none;">Scanned Result: <span id="qr-result-cam"></span></p>
+            <p id="scanned-result-cam" style="display: none;">
+                Scanned Result: <span id="qr-result-cam"></span>
+            </p>
         </div>
-
+    
+        <!-- Image Upload Section -->
         <div class="qr-upload">
-            <button onclick="triggerImageUpload()" class="upload-selection" id="upload-selection">Upload QR to
-                Scan</button>
+            <button onclick="triggerImageUpload()" class="upload-selection" id="upload-selection">
+                Upload QR to Scan
+            </button>
+    
             <div id="qr-reader-upd" style="display: none;">
                 <input type="file" id="qr-image-input" accept="image/*" />
             </div>
+    
             <p id="error-msg-upd" class="error-msg" style="display: none;"></p>
-            <p id="scanned-result-upd" style="display: none;">Scanned Result: <span id="qr-result-upd"></span></p>
+            <p id="scanned-result-upd" style="display: none;">
+                Scanned Result: <span id="qr-result-upd"></span>
+            </p>
         </div>
     </div>
+
 
     <script src="script.js"></script>
 </body>
