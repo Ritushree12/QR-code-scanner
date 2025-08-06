@@ -1,0 +1,78 @@
+body {
+  background-color: rgb(13, 13, 80);
+  color: white;
+  margin: 0;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid white;
+  margin: 25px;
+}
+
+.scanner-select {
+  border: 1px solid white;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 10px;
+  margin: 25px;
+  flex-wrap: wrap;
+}
+
+.cam-selection,
+.upload-selection {
+  all: unset;
+  width: 200px;
+  font-size: 16px;
+  color: white;
+  border-radius: 12px;
+  padding: 20px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.15);
+  transition: background-color 0.3s ease, transform 0.2s ease,
+    box-shadow 0.2s ease;
+  text-align: center;
+}
+
+.cam-selection {
+  background-color: rgb(216, 61, 193);
+}
+
+.upload-selection {
+  background-color: rgb(10, 175, 57);
+}
+
+.cam-selection:hover,
+.upload-selection:hover {
+  transform: translateY(-4px) scale(1.05);
+}
+
+.cam-selection:active,
+.upload-selection:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+.error-msg {
+  color: red;
+  font-weight: bold;
+}
+
+.camera-selection,
+.qr-upload {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (max-width: 600px) {
+  .scanner-select {
+    flex-direction: column;
+  }
+}
