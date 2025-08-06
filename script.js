@@ -48,7 +48,6 @@ function startCameraScan() {
         "Error getting cameras: " + err;
     });
 }
-
 function stopCameraScan() {
   if (html5QrCode) {
     html5QrCode
@@ -61,14 +60,17 @@ function stopCameraScan() {
         document.getElementById("cam-selection").style.display = "inline-block";
         document.getElementById("upload-selection").style.display =
           "inline-block";
+
         document.getElementById("qr-reader-cam").style.display = "none";
 
         document.getElementById("scanned-result-cam").style.display = "none";
+        document.getElementById("qr-result-cam").textContent = "";
+
         document.getElementById("error-msg-cam").style.display = "none";
         document.getElementById("error-msg-cam").textContent = "";
-        document.getElementById("qr-result-cam").textContent = "";
       })
       .catch((err) => {
+        document.getElementById("error-msg-cam").style.display = "block";
         document.getElementById("error-msg-cam").textContent =
           "Stop failed: " + err;
       });
@@ -112,5 +114,4 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 document.getElementById("logo").addEventListener("click", function () {
   window.location.href = "index.html";
-  // location.reload();
 });
