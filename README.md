@@ -69,9 +69,3 @@ Let me know if you want me to:
 - Replace placeholders (like your GitHub username or contact email)
 - Add Netlify/Vercel deployment steps
 - Include actual screenshots
-
-Would you like this saved as a downloadable `.md` file too?
-
-```
-
-```
